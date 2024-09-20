@@ -1,0 +1,95 @@
+html {
+  --input-range-thumb-width: 0px;
+  --custom-scrollbar-div-child-width: 0px;
+}
+
+body {
+  background-color: darkslategray;
+  height: 100dvh;
+  margin: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  width: 80%;
+  padding-top: 100px;
+}
+
+h1,
+h2,
+a,
+p {
+  text-align: center;
+  color: aliceblue;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.info {
+  margin-top: 100px;
+  padding-bottom: 80px;
+}
+
+.parent {
+  width: 80%;
+  height: 110px;
+  padding: 10px;
+  margin-inline: auto;
+  margin-bottom: 50px;
+  background-color: rgba(127, 255, 212, 0.6);
+  /* this is auto because we dont want an empty scrollbar */
+  overflow-x: auto;
+}
+
+.child {
+  width: 120%;
+  background-color: beige;
+  height: 90px;
+}
+
+.custom-scrollbar-div {
+  width: 50%;
+  height: 14px;
+  margin-block: 30px;
+  margin-inline: auto;
+  /* this is auto because we dont want an empty scrollbar */
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.custom-scrollbar-div-child {
+  width: var(--custom-scrollbar-div-child-width);
+  height: 10px;
+  margin-block: 30px;
+}
+
+.input-wrapper {
+  width: 50%;
+  margin-inline: auto;
+}
+
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 14px;
+  background: #b6b6b6;
+  border-radius: 6px;
+  padding-inline: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 10px;
+  width: var(--input-range-thumb-width);
+  border-radius: 6px;
+  background: black;
+  -webkit-appearance: none;
+  margin-top: 2px;
+}
